@@ -1,3 +1,5 @@
+$LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
+
 Gem::Specification.new do |s|
   s.name         =  'route-mapper'
   s.version      =  '0.0.0'
@@ -7,11 +9,12 @@ Gem::Specification.new do |s|
   s.authors      =  ['Scott Lenander']
   s.email        =  'sjlteacher@gmail.com'
   s.homepage     =  'https://github.com/SJl149/route-mapper'
-  
+
   s.files        =  [
                     '{lib}/**/*',
                     README.md,
                     LICENSE
                     ]
   s.license      =  'MIT'
+  s.add_dependency 'launchy', '~> 2.4'
 end
