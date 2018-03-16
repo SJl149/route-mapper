@@ -11,10 +11,10 @@ Gem::Specification.new do |s|
   s.email        =  'sjlteacher@gmail.com'
   s.homepage     =  'https://github.com/SJl149/sorted-routes'
 
-  s.files        =  [
+  s.files        =  Dir[
                     '{lib}/**/*',
-                    README.md,
-                    LICENSE
+                    'README.md',
+                    'LICENSE'
                     ]
   s.license      =  'MIT'
   s.add_dependency 'launchy', '~> 2.4'
