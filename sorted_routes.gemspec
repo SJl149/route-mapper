@@ -1,14 +1,15 @@
 $LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
-  s.name         =  'route-mapper'
+  s.name         =  'sorted-routes'
   s.version      =  '0.0.0'
   s.date         =  Time.now.utc.strftime("%Y-%m-%d")
-  s.summary      =  "Maps and orgainzes Rails routes"
+  s.summary      =  'Sort out your routes!'
+  s.description  =  'Displays rails routes in a sortable and searchable table in your browser.'
 
   s.authors      =  ['Scott Lenander']
   s.email        =  'sjlteacher@gmail.com'
-  s.homepage     =  'https://github.com/SJl149/route-mapper'
+  s.homepage     =  'https://github.com/SJl149/sorted-routes'
 
   s.files        =  [
                     '{lib}/**/*',
