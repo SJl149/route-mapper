@@ -1,1 +1,1 @@
-require 'sorted-routes/railtie' if defined?(Rails)
+require 'sort_routes/railtie' 
