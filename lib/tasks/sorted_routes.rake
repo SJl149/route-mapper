@@ -1,6 +1,6 @@
 require 'launchy'
 
-task sort_routes: :environment do
+task :sorted_routes => :environment do
   output_file = File.join(Rails.root, 'tmp/sorted_routes.html')
 
   File.open(output_file, 'w') do |f|
@@ -8,9 +8,10 @@ task sort_routes: :environment do
             <meta name='viewport' content='width=device-width, initial-scale=1'>
             <script src='https://code.jquery.com/jquery-1.12.4.js'></script>
             <script type='text/javascript' charset='utf8' src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js'></script>
-            <script>$(document).ready(function() {
-                        $('#sorted-routes').DataTable();
-                    } );
+            <script type='text/javascript'>
+              $(document).ready(function() {
+                  $('#sorted-routes').DataTable();
+              });
             </script>
             <link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css'>
             <style type='text/css'>

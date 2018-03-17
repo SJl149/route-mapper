@@ -1,8 +1,10 @@
 $LOAD_PATH.push File.expand_path('../lib', __FILE__)
 
+require 'sorted_routes/version'
+
 Gem::Specification.new do |s|
   s.name         =  'sorted-routes'
-  s.version      =  '0.0.2'
+  s.version      =  SortedRoutes::VERSION
   s.date         =  Time.now.utc.strftime("%Y-%m-%d")
   s.summary      =  'Sort out your routes!'
   s.description  =  'Displays rails routes in a sortable and searchable table in your browser.'
