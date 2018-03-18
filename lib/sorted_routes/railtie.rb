@@ -1,9 +1,13 @@
+require 'sorted_routes'
+require 'rails'
+
 module SortedRoutes
   class Railtie < Rails::Railtie
-    VERSION = '0.0.9'
+    railtie_name :sorted_routes
 
     rake_tasks do
-      load 'tasks/sorted_routes.rake'
+      path = 'tasks/sorted_routes.rake'
+      load path
     end
   end
 end

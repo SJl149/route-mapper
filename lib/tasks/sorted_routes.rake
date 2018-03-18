@@ -1,5 +1,7 @@
 require 'launchy'
 
+desc 'sorted_routes rake task'
+
 task :sorted_routes => :environment do
   output_file = File.join(Rails.root, 'tmp/sorted_routes.html')
 
