@@ -1,8 +1,9 @@
-class RailsSortedRoutes < Rails::Railtie
-  VERSION = '0.0.7'
+module SortedRoutes
+  class Railtie < Rails::Railtie
+    VERSION = '0.0.9'
 
-  rake_tasks do
-    path = File.join(File.dirname(__FILE__), '../tasks/sorted_routes.rake')
-    load path
+    rake_tasks do
+      load 'tasks/sorted_routes.rake'
+    end
   end
 end
