@@ -1,4 +1,5 @@
 require 'launchy'
+require 'rake'
 
 desc 'sorted_routes rake task'
 

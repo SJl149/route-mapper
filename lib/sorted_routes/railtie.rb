@@ -6,8 +6,7 @@ module SortedRoutes
     railtie_name :sorted_routes
 
     rake_tasks do
-      path = 'tasks/sorted_routes.rake'
-      load path
+      Dir[File.join(File.dirname(__FILE__),'tasks/*.rake')].each { |f| load f }
     end
   end
 end
