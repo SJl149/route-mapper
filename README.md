@@ -27,9 +27,9 @@ A rake task generates and opens the HTML file `tmp/sorted_routes.html` in your d
 + Routes table can be copied, printed, or saved as a pdf by clicking on buttons in the top-left corner.
 
 ### System Dependencies
-+ Launchy (included in the gem) opens the HTML file
-+ jQuery
-+ DataTables jQuery plugin is used to generate the tables.
++ [Launchy](https://github.com/copiousfreetime/launchy) (included in the gem) opens the HTML file
++ [jQuery](https://jquery.com/)
++ [DataTables](https://www.datatables.net/) jQuery plugin is used to generate the tables.
 
 ## Author
 Created by [Scott Lenander](http://scottlenander.com/)
