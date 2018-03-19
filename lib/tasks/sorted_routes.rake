@@ -35,11 +35,15 @@ task :sorted_routes => :environment do
                 </script>
                 <link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css'>
                 <style type='text/css'>
-                 body { color: Navy; }
+                 body {
+                   font-family: 'Helvetica', 'Arial', sans-serif;
+                   color: Navy;
+                 }
                 </style>
               </head>
               <body>
-                <table id='sorted-routes' class='display' width='100%'>
+                <h1 style='text-align:center;'>SortedRoutes for #{Rails.application.class.parent.to_s}</h2>
+                <table id='sorted-routes' class='compact hover order-column row-border' width='100%'>
                 <thead>
                   <tr>
                     <th>Name</th>
