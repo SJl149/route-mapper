@@ -11,14 +11,29 @@ task :sorted_routes => :environment do
             <meta name='viewport' content='width=device-width, initial-scale=1'>
             <script src='https://code.jquery.com/jquery-1.12.4.js'></script>
             <script type='text/javascript' charset='utf8' src='https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js'></script>
+            <link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.16/b-1.5.1/b-html5-1.5.1/b-print-1.5.1/cr-1.4.1/datatables.min.css'/>
+            <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js'></script>
+            <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js'></script>
+            <script type='text/javascript' src='https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.16/b-1.5.1/b-html5-1.5.1/b-print-1.5.1/cr-1.4.1/datatables.min.js'></script>
+
             <script type='text/javascript'>
               $(document).ready(function() {
-                  $('#sorted-routes').DataTable();
+                  $('#sorted-routes').DataTable({
+                    'pageLength': 100,
+                    'order': [ 3, 'asc' ],
+                    'columnDefs': [
+                      { className: 'dt-right', 'targets': [ 0 ] }
+                    ],
+                    dom: 'Bfrtip',
+                    buttons: [
+                        'copy', 'print', 'pdf'
+                    ]
+                  });
               });
             </script>
             <link rel='stylesheet' type='text/css' href='https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css'>
             <style type='text/css'>
-             body { background-color: #333; color: #01dad4; }
+             body { color: #01dad4; }
             </style></head>
             <body><table id='sorted-routes' class='display' width='100%'>
             <thead><tr><th>Name</th><th>Verb</th><th>Path</th><th>Requirements</th></tr></thead><tbody>"
