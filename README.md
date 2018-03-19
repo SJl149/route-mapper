@@ -1,3 +1,3 @@
-# RouteMapper
+# Sorted Routes
 
-Understand your routes with colors and organiztion.
+Rails routes in a searchable and sortable table in your browser.
